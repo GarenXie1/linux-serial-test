@@ -2,7 +2,27 @@
 
 # Linux Serial Test Application
 
-# Compiling
+# Android Compiling
+
+## Using  mmm
+
+`mmm external/linux-serial-test`
+
+- out/target/product/msm8909/system/bin/linux-serial-test
+
+## Push 到板子
+
+~~~shell
+adb root
+adb remount
+adb push linux-serial-test /system/bin/
+~~~
+
+
+
+
+
+# Linux Compiling
 
 This is a very simple program -- there are several ways to compile it on Linux:
 
@@ -18,7 +38,7 @@ This is a very simple program -- there are several ways to compile it on Linux:
 # Usage
 
     Usage: linux-serial-test [OPTION]
-
+    
       -h, --help
       -b, --baud        Baud rate, 115200, etc (115200 is default)
       -p, --port        Port (/dev/ttyS0, etc) (must be specified)
